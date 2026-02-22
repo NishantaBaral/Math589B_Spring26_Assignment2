@@ -154,8 +154,3 @@ def poly_integral_from_values(x_nodes: np.ndarray, y_nodes: np.ndarray) -> float
 
     integral = gauss_legendre(lambda x: _barycentric_eval(x_nodes, y_nodes, np.array([x]))[0], -1, 1, 90)
     return integral
-
-if __name__ == "__main__":
-    x = np.array([-5,-4,-3,-2,-1,0,1,2,3,4,5])
-    y = np.array([25,16,9,4,1,0,1,4,9,16,25])
-    print(poly_integral_from_values(x,y))
